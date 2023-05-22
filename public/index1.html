@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataTable</title>
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+  <header class="bg-white p-5 w-full flex justify-between">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    <div class="flex justify-between">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6 mr-2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+      </svg>
+
+    </div>
+  </header>
+  <nav class="container justify-center mx-auto">
+    <div class="flex justify-between w-full my-2 mx-auto py-10">
+      <div>
+        <a href="#" class="text-blue-400"> Compras </a>/ Listagem
+      </div>
+      <button class="bg-blue-300 rounded p-2 w-auto">Adicionar compra</button>
+    </div>
+  </nav>
+
+  <main class="container justify-center mx-auto">
+    <div class="flex flex-col">
+      <div class="w-full">
+        <div class="mb-5 bg-white rounded flex-col-reverse justify-between py-10 px-5">
+          <div class="flex">
+            <div class="w-2/4 mr-5">
+              <select name="select_state" class="p-2 rounded border-indigo-100 w-full" style="background-color: #bec5c5;">
+                <option value="" disabled selected hidden>Selecione o estado</option>
+                <option value="">Lorem, ipsum dolor.</option>
+                <option value="">Lorem, ipsum.</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="from" class="bg-gray-200 rounded p-2" style="margin-right:-4px;">Data</label> <input
+                type="text" id="datepicker-13" name="from" class="rounded mr-4 w-2/5 p-1"
+                style="border:1px black solid;" placeholder="  dd-mm-yyyy">
+
+              <label for="to" class="bg-gray-200 rounded p-2" style="margin-right:-4px;">até</label> <input type="text"
+                id="datepicker-11" name="to" class="rounded w-2/5 p-1" style="border:1px black solid"
+                placeholder="  dd-mm-yyyy">
+            </div>
+
+          </div>
+          <div class="mt-5">
+            <button class="bg-blue-300 rounded p-2 mr-2">Pesquisar</button>
+            <button class="bg-gray-300 rounded border-black p-2">Limpar Filtro</button>
+          </div>
+        </div>
+
+
+
+        <div class="bg-white p-5 rounded">
+          <table id="dataTable" class="stripe">
+            <thead>
+              <tr>
+                <th>
+                  Na da Encomenda
+                </th>
+                <th>
+                  Fornecedor
+                </th>
+                <th>
+                  Data
+                </th>
+                <th>
+                  Estado
+                </th>
+                <th>
+                  Nr de Productos
+                </th>
+                <th>
+                  Total
+                </th>
+                <th>
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    Jon doe
+                  </div>
+                </td>
+                <td>
+                  <div>jhondoe@example.com</div>
+                </td>
+                <td>
+                  Estado
+                </td>
+                <td>
+                  23
+                </td>
+                <td class="text-center">
+                  0
+                </td>
+                <td>
+                  <select name="opcoes" class="p-2 rounded border-indigo-100"
+                    style="background-color: rgb(235, 240, 240);;">
+                    <option value="" disabled selected hidden>Opções</option>
+                    <option value="">Lorem, ipsum dolor.</option>
+                    <option value="">Lorem, ipsum.</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    Jon doe
+                  </div>
+                </td>
+                <td>
+                  <div>jhondoe@example.com</div>
+                </td>
+                <td>
+                  Estado
+                </td>
+                <td>
+                  23
+                </td>
+                <td class="text-center">
+                  0
+                </td>
+                <td>
+                  <select name="opcoes" class="p-2 rounded border-indigo-100"
+                    style="background-color: rgb(235, 240, 240);;">
+                    <option value="" disabled selected hidden>Opções</option>
+                    <option value="">Lorem, ipsum dolor.</option>
+                    <option value="">Lorem, ipsum.</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    Jon doe
+                  </div>
+                </td>
+                <td>
+                  <div>jhondoe@example.com</div>
+                </td>
+                <td>
+                  Estado
+                </td>
+                <td>
+                  23
+                </td>
+                <td class="text-center">
+                  0
+                </td>
+                <td>
+                  <select name="opcoes" class="p-2 rounded border-indigo-100"
+                  style="background-color: rgb(235, 240, 240);;">
+                  <option value="" disabled selected hidden>Opções</option>
+                  <option value="">Lorem, ipsum dolor.</option>
+                  <option value="">Lorem, ipsum.</option>
+                </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <div>
+                    Jon doe
+                  </div>
+                </td>
+                <td>
+                  <div>jhondoe@example.com</div>
+                </td>
+                <td>
+                  Estado
+                </td>
+                <td>
+                  23
+                </td>
+                <td class="text-center">
+                  0
+                </td>
+                <td>
+                  <select name="opcoes" class="p-2 rounded border-indigo-100"
+                    style="background-color: rgb(235, 240, 240);;">
+                    <option value="" disabled selected hidden>Opções</option>
+                    <option value="">Lorem, ipsum dolor.</option>
+                    <option value="">Lorem, ipsum.</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('#dataTable').DataTable({
+        "language": {
+          "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+        }
+      });
+
+      $(function () {
+        $("#datepicker-13").datepicker();
+        $("#datepicker-11").datepicker();
+      });
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataTable</title>
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+
+  <div class="container justify-center mx-auto">
+    <div class="flex flex-col">
+      <div class="w-full">
+        <div class="p-12 border-b border-gray-200 shadow">
+          <table class="divide-y divide-gray-300" id="dataTable">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Na da Encomenda
+                </th>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Fornecedor
+                </th>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Data
+                </th>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Estado
+                </th>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Nr de Productos
+                </th>
+                <th class="px-6 py-2 text-xs text-gray-500">
+                  Total
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-500">
+              <tr class="whitespace-nowrap">
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  1
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-900">
+                    Jon doe
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-500">jhondoe@example.com</div>
+                </td>
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  2021-1-12
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Edit</a>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full">Delete</a>
+                </td>
+              </tr>
+              <tr class="bg-gray-50 whitespace-nowrap">
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  2
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-900">
+                    Jon doe 2
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-500">jhondoe2@example.com</div>
+                </td>
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  2021-1-12
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Edit</a>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-red-400 rounded-full">Delete</a>
+                </td>
+              </tr>
+              <tr class="whitespace-nowrap">
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  3
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-900">
+                    Jon doe 3
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-500">jhondoe3@example.com</div>
+                </td>
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  2021-1-12
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Edit</a>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full">Delete</a>
+                </td>
+              </tr>
+
+
+              <tr class="bg-gray-50 whitespace-nowrap">
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  4
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-900">
+                    Jon doe 4
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <div class="text-sm text-gray-500">jhondoe4@example.com</div>
+                </td>
+                <td class="px-6 py-4 text-sm text-center text-gray-500">
+                  2021-1-12
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Edit</a>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <a href="#" class="px-4 py-1 text-sm text-red-400 rounded-full">Delete</a>
+                </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable({
+        "language": {
+                "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+            }
+      });
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTable</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-white p-5 w-full flex justify-between">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <div class="flex justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 mr-2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+            </svg>
+
+        </div>
+    </header>
+
+    <nav class="container justify-center mx-auto">
+        <div class="flex justify-between w-full my-2 mx-auto py-10">
+            <div>
+                <a href="#" class="text-blue-400"> Compras </a>/ Listagem
+            </div>
+            <button class="bg-blue-300 rounded p-2 w-auto">Adicionar Fornecedor</button>
+        </div>
+    </nav>
+
+    <main class="container justify-center mx-auto">
+
+        <div class="flex flex-col w-full">
+    <h6 class="bg-white rounded p-2 px-4                                                                            " style="border-bottom: 1px solid  rgb(199, 193, 193);">Dividas a fornecedores</h6>
+            <div class="w-full mb-10 bg-white rounded flex-col-reverse justify-between py-10 px-5">
+
+                <div class="flex justify-between mb-2">
+                    
+                    <div class="w-1/2 flex flex-col mr-2 border">
+                        <label for="">Nome do producto</label>
+                        <input type="text" placeholder="Nome do producto" class="border p-1 rounded">
+                    </div>
+
+                    <div class=" w-1/2 flex flex-col border">
+                        <label for="">Codigo de barra</label>
+                        <input type="text" placeholder="Codigo de barra" class="border p-1 rounded">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="w-full bg-white rounded flex-col-reverse justify-between py-10 px-5">
+
+                <div class="w-full flex flex-col mb-3">
+                    <label for="">Categoria</label>
+                    <select name="select_state" class="p-2 rounded border-indigo-100 w-full border"
+                        style="background-color: white;">
+                        <option value="">Vestidos</option>
+                        <option value="">Calcas</option>
+                        <option value="">Camisas</option>
+                    </select>
+                </div>
+
+
+                <div class="flex justify-between mb-2">
+                    <div class="w-1/2 flex flex-col mr-2">
+                        <label for="">Tipo</label>
+                        <select name="select_state" class="p-2 rounded border-indigo-100 w-full border"
+                            style="background-color: white;">
+                            <option value="">Producto</option>
+                            <option value="">Lorem</option>
+                            <option value="">Lorem</option>
+                        </select>
+                    </div>
+
+                    <div class=" w-1/2 flex flex-col">
+                        <label for="">Unidade</label>
+                        <select name="select_state" class="p-2 rounded border-indigo-100 w-full border"
+                            style="background-color: white;">
+                            <option value="">Unidade</option>
+                            <option value="">Lorem</option>
+                            <option value="">Lorem</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="flex justify-between mb-2">
+                    <div class="w-1/2 flex flex-col mr-2">
+                        <label for="">Tamanho</label>
+                        <select name="select_state" class="p-2 rounded border-indigo-100 w-full border"
+                            style="background-color: white;">
+                            <option value="" disabled selected hidden>Selecione o Tamanho</option>
+                            <option value="">Lorem</option>
+                            <option value="">Lorem</option>
+                        </select>
+                    </div>
+
+                    <div class=" w-1/2 flex flex-col mr-2">
+                        <label for="">Cor</label>
+                        <select name="select_state" class="p-2 rounded border-indigo-100 w-full border"
+                            style="background-color: white;" aria-placeholder="Selecione a cor">
+                            <option value="" disabled selected hidden>Selecione a cor</option>
+                            <option value="">Lorem</option>
+                            <option value="">Lorem</option>
+                        </select>
+                    </div>
+
+
+                    <div class="w-1/2 flex flex-col">
+                        <label for="">Numero</label>
+                        <input type="text" class="border p-1 rounded">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
